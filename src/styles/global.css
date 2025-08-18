@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "LondrinaSolid";
+  src: url("/fonts/LondrinaSolid-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TildaSans";
+  src: url("/fonts/TildaSans-VF.ttf") format("truetype");
+}
+
+body {
+  font-family: "TildaSans";
+  font-size: 1.1em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "LondrinaSolid";
+  line-height: 0.7em;
+}
+h1 {
+  font-size: 4em;
+  font-variant: small-caps;
+  padding-bottom: 0.4em;
+}
+h2 {
+  font-size: 1.8em;
+  color: #c27e56;
+  padding-bottom: 1em;
+}
+h3 {
+  font-variant: unset;
+  font-size: 1.5em;
+  color: #c27e56;
+  padding-bottom: 0.5em;
+}
+
+li {
+  margin-bottom: 0.2em;
+}
+
+.pager-left {
+  margin-top: 40px;
+  float: left;
+}
+.pager-right {
+  margin-top: 40px;
+  float: right;
+}

@@ -1,0 +1,43 @@
+---
+import Link from "@/components/Link.astro";
+import ExternalLink from "@/components/ExternalLink.astro";
+const currentPath = Astro.url.pathname;
+---
+
+<div>
+  <a href="/" class="hover:!no-underline"
+    ><h1 class="text-cyan-700/70 dark:text-cyan-500/50">
+      step<br />hen<br />gard<br />ener<br />
+    </h1>
+  </a>
+  <ul>
+    <li>
+      <ExternalLink link="https://github.com/stega" title="My Github page"
+        >Github</ExternalLink
+      >
+    </li>
+    <li class="pb-6">
+      <ExternalLink
+        link="https://www.linkedin.com/in/stephen-gardener-a5244323a/"
+        title="My LinkedIn page">LinkedIn</ExternalLink
+      >
+    </li>
+    <li>
+      <Link href="/music/">
+        {currentPath.startsWith("/music") ? "➪" : ""}
+        Music</Link
+      >
+    </li>
+    <li>
+      <Link href="/projects/">
+        {currentPath.startsWith("/projects") ? "➪" : ""}
+        Projects</Link
+      >
+    </li>
+    <li>
+      <Link href="/drawings">
+        {currentPath.startsWith("/drawings") ? "➪" : ""}
+        Drawings</Link>
+    </li>
+  </ul>
+</div>

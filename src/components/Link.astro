@@ -1,0 +1,9 @@
+---
+const { href, title } = Astro.props;
+---
+
+<span class="text-lime-600/90">
+  <a href={href} title={title} class="hover:underline inline-block"
+    ><slot />
+  </a>
+</span>

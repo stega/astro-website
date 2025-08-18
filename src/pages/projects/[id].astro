@@ -1,0 +1,87 @@
+---
+import Layout from "@/layouts/Layout.astro";
+// import Prose from "@/components/Prose.astro";
+import { getCollection, render } from "astro:content";
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection("projects");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+// 2. For your template, you can get the entry directly from the prop
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout>
+  <article>
+    <h2>{post.data.title}</h2>
+    <Content />
+  </article>
+</Layout>
+
+<!-- Styles for markdown files -->
+<style is:global>
+  article > h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  article > p > img {
+    margin-top: 28px;
+    margin-bottom: 34px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+  }
+  article > p {
+    margin-bottom: 12px;
+  }
+  article > ul {
+    list-style-type: circle;
+    margin-left: 35px;
+    margin-bottom: 28px;
+  }
+  article > ol {
+    list-style-type: lower-latin;
+    margin-left: 35px;
+    margin-bottom: 28px;
+  }
+  a {
+    color: #6eaf00;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  figure {
+    margin-bottom: 1.4em;
+  }
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+  figure > audio {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  figure > img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 0 !important;
+  }
+  figure > iframe {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 0 !important;
+  }
+</style>

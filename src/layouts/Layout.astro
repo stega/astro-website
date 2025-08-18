@@ -1,22 +1,23 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { pageTitle, thing } = Astro.props;
+import Navigation from "@/components/Navigation.astro";
+import "@/styles/global.css";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="p-10 mb-10 bg-white dark:bg-gray-800 dark:text-gray-400">
+    <div class="flex-none sm:flex flex-row gap-15 mx-auto max-w-240 text-right">
+      <Navigation />
+      <section class="max-w-196 mt-4 pt-10 sm:pt-0 text-left">
+        <slot />
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ExternalLink from "@/components/ExternalLink.astro";
+import Link from "@/components/Link.astro";
+---
+
+<Layout>
+  <h2>Music</h2>
+  <figure class="md:float-right text-right">
+    <img
+      class="contrast-200 rounded-lg shadow-lg opacity-70 border-1 border-[#4c4c4c] md:w-60 md:ml-8 mt-6 md:mt-1 mb-10 md:mb-4 md:float-right"
+      src="/bass.jpg"
+    />
+    <figcaption class="italic text-sm mb-10 mt-[-25px] md:mt-0">
+      Me, playing with Sleep Kicks, 2024
+    </figcaption>
+  </figure>
+  <p class="mb-2">
+    I have been writing and recording music since I got my first Fostex 4-track
+    recorder back in the late 80s. This started a fascination with layering
+    sound and creating textures that has never left me.
+  </p>
+
+  <p>
+    Since then I have gotten myself a Masters degree in Music Technology and
+    spent half my life writing and recording electronic & guitar based music. My
+    main instrument is bass guitar which I have played with numerous bands,
+    including <ExternalLink
+      link="https://www.youtube.com/@sleepkicks"
+      title="Sleep Kicks on YouTube">Sleep Kicks</ExternalLink
+    > and <ExternalLink
+      link="https://www.youtube.com/geraintrwhittaker"
+      title="Geraint Rhys on YouTube">Geraint Rhys</ExternalLink
+    >
+  </p>
+  <!-- <hr class="h-px border-0 my-6 bg-gray-700" /> -->
+  <h3 class="mt-12">stega</h3>
+  <p>
+    I have been recording my own music under the name <em>stega</em> since the 1990s.
+    The following are a few songs I've written over the years.
+  </p>
+  <ul class="ml-4 my-2">
+    <li>
+      <Link href="there-are-more-trees">
+        ♪ There are more trees over that way
+      </Link>
+    </li>
+    <li>
+      <Link href="the-leaving">♪ The Leaving</Link>
+    </li>
+    <li>
+      <Link href="wandering-lost">♪ Wandering Lost</Link>
+    </li>
+    <li>
+      <Link href="scanning-for-elk">♪ Scanning for Elk</Link>
+    </li>
+    <li>
+      <Link href="i-think-she-went-out">♪ I think she went out</Link>
+    </li>
+  </ul>
+
+  <p class="mt-5">
+    More tracks can be found on my
+    <ExternalLink
+      link="https://soundcloud.com/stega-1"
+      title="My Soundcloud page">Soundcloud page</ExternalLink
+    >
+  </p>
+</Layout>
