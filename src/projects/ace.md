@@ -4,7 +4,7 @@ summary: "A simple tool for learning about algorithmic composition techniques."
 tags: ["algorithmic-composition"]
 ---
 
-<p style="border: 1px solid #999; padding: 1em; border-radius: 1em;">tl;dr - I built a web app that lets you explore different algorithmic composition approaches. You can check it out here: <a href="https://stephengardener.com/ace" target="_blank">The Algorithmic Composition Explorer</a></p>
+<p style="border: 1px solid #999; padding: 1em; border-radius: 1em;">tl;dr - I built a web app that lets you explore different algorithmic composition approaches. You can check it out here: <a href="https://ace.stephengardener.com" target="_blank">The Algorithmic Composition Explorer</a></p>
 
 Algorithmic composition has a long and rich history, and encompasses a wide range of approaches and techniques. It can been defined simply (and quite broadly!) as the application of formal rules to generate musical material and ideas.
 
